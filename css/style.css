@@ -1,17 +1,24 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #1a55ba, #d99b21);
-  background-size: 600% 600%;
-  animation: gradientShift 25s ease infinite;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(79, 214, 135, 1) 39%, rgba(98, 204, 181, 1) 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
   color: white;
   min-height: 100vh;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
+
 .glass-box {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(14px);
