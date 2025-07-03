@@ -39,6 +39,12 @@ main {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+@media (min-width: 768px;) {
+  .glass-box {
+    max-width: 1000px;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
