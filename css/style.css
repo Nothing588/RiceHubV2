@@ -33,7 +33,7 @@ main {
   border-radius: 20px;
   padding: 30px;
   margin: 20px 0;
-  width: 100%;
+  width: fit-content;
   max-width: 650px;
   animation: fadeIn 1s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
