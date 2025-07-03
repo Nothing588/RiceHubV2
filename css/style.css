@@ -299,7 +299,7 @@ main {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem;
     border-radius: 0 0 10px 10px;
-    z-index: 99;
+    z-index: 999;
 }
 
 .navbar-links.active {
@@ -383,54 +383,6 @@ main {
     background-color: white;
 }
 
-.dropdown {
-    font-family: 'Rajdhani', sans-serif;
-}
-
-.dropdown-content a {
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-content i {
-    margin-right: 8px;
-    font-size: 16px;
-}
-
-.hamburger-menu {
-    position: relative;
-}
-
-.menu-content {
-    display: none; 
-    flex-direction: column; 
-    background-color: white; 
-    border: 1px solid #ccc; 
-    padding: 10px; 
-    position: absolute; 
-    z-index: 1000; 
-}
-
-.hamburger-menu.active .menu-content {
-    display: flex; 
-}
-
-.menu-content a {
-    display: flex; 
-    align-items: center; 
-    padding: 8px 10px; 
-    text-decoration: none; 
-    color: black; 
-}
-
-.menu-content i {
-    margin-right: 8px; 
-    font-size: 16px; 
-}
-
-.nav-link.active {
-    color: red; 
-}
 .footer {
     background-color: rgba(138, 128, 133, 0.33);
     padding: 1rem;
