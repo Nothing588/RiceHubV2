@@ -75,6 +75,16 @@ main {
   background: #ffc107;
 }
 
+.download-button {
+    margin: 0 5px; 
+    text-decoration: none; 
+    padding: 10px 15px;
+    background-color: #00a800; 
+    border-radius: 5px; 
+    color: #ffffff;
+    transition: background-color 0.3s; 
+}
+
 .button-group {
   display: flex;
   gap: 15px;
