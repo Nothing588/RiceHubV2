@@ -375,13 +375,56 @@ main {
 }
 
 .navbar::after {
-     content: '';
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: white;
+}
+
+.popup {
+    postion: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 0.4s ease;
+}
+
+.popup .btn {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 .footer {
     background-color: rgba(138, 128, 133, 0.33);
