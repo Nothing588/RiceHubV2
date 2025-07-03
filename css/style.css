@@ -187,7 +187,7 @@ main {
 }
 .navbar {
     postion: reletive;
-    background: rgba(138, 128, 133, 0.33);
+    background: rgb(34,2,0);
     backdrop-filter: blur(14px);
     padding: 1rem;
     display: flex;
