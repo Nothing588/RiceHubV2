@@ -1,0 +1,265 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1a55ba, #d99b21);
+  background-size: 600% 600%;
+  animation: gradientShift 25s ease infinite;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.glass-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 650px;
+  animation: fadeIn 1s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glass-box h2 {
+  font-family: 'Rajdhani', sans-serif;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.glass-box p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn {
+  background: #ffe58a;
+  color: #1a1a1a;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffc107;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.people-box {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  padding: 20px;
+}
+
+.people-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.people-info {
+  flex: 1;
+}
+
+.people-info h3 {
+  margin: 0 0 5px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+}
+
+.people-info p {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.people-info .btn {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+@media (max-width: 600px) {
+  .people-box {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .people-info {
+    text-align: center;
+  }
+}
+.skill-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-logo {
+    display: none; 
+    height: 50px;
+    width: 50px;
+    margin-right: 15px; 
+    object-fit: cover; 
+    order: -1; 
+    border-radius: 50%; 
+    border: 1px solid 797979; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.desktop-logo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.nav-title {
+    font-weight: bold;
+    margin-right: 3rem;
+    flex-shrink: 0;
+    z-index: 100;
+}
+
+.nav-title .title-full {
+    display: none;
+}
+
+.nav-title .title-short {
+    display: inline-block;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar a i {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .desktop-logo {
+        display: block;
+    }
+
+    .navbar a i {
+        display: inline-block;
+        opacity: 1;
+    }
+
+    .nav-title .title-full {
+        display: inline-block;
+    }
+    .nav-title .title-short {
+        display: none;
+    }
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer::after {
+    display: none !important;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    top: 0;
+}
+
+.navbar, .footer {
+    font-family: 'Rajdhani', sans-serif;
+}
