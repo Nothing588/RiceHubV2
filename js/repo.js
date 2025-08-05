@@ -4,10 +4,10 @@ fetch('json/repo.json')
     const container = document.getElementById('app-list');
     apps.forEach(app => {
       const card = document.createElement('div');
-      card.className = 'glass-box';
+      card.className = 'glass-box people-box';
       card.innerHTML = `
-        <img class="app-logo" src="${app.icon}" alt="${app.name}">
-        <div class="glass-box">
+        <img class="people-pic" src="${app.icon}" alt="${app.name}">
+        <div class="people-info">
           <h2>${app.name}</h2>
           <p><strong>Bundle ID:</strong> ${app.bundle_id}</p>
           <p><strong>Version:</strong> ${app.version}</p>
