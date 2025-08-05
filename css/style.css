@@ -45,6 +45,18 @@ main {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+.app-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 650px;
+  animation: fadeIn 1s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
 .grow-box {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(14px);
@@ -127,6 +139,14 @@ main {
   padding: 20px;
 }
 
+.app-box2 {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  padding: 20px;
+}
+
 .people-pic {
   width: 70px;
   height: 70px;
@@ -137,15 +157,6 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.app-pic {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px;
-  flex-shrink: 0;
-}
-  
 .people-info {
   flex: 1;
 }
@@ -455,7 +466,7 @@ main {
   padding: 1rem;
 }
 
-.glass-box.people-box {
+.app-box.app-box2 {
   flex: 1 1 300px; 
   max-width: 450px;
   min-width: 250px;
