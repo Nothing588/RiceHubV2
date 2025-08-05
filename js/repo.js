@@ -11,7 +11,7 @@ fetch('json/repo.json')
           <h2>${app.name}</h2>
           <p><strong>Bundle ID:</strong> ${app.bundle_id}</p>
           <p><strong>Version:</strong> ${app.version}</p>
-          <a href="${app.download}">Download IPA</a>
+          <a class="download-button" href="${app.download}">Download IPA</a>
         </div>
       `;
       container.appendChild(card);
