@@ -1,0 +1,16 @@
+[
+  {
+    "name": "RiceMusic",
+    "bundle_id": "com.ricemusic.app",
+    "version": "1.0.2",
+    "icon": "https://yourserver.com/icons/ricemusic.png",
+    "download": "https://yourserver.com/ipas/ricemusic.ipa"
+  },
+  {
+    "name": "SkibitiBrowser",
+    "bundle_id": "com.skibiti.browser",
+    "version": "2.5",
+    "icon": "https://yourserver.com/icons/skibiti.png",
+    "download": "https://yourserver.com/ipas/skibiti.ipa"
+  }
+]
