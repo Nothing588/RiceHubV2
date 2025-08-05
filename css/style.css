@@ -476,7 +476,8 @@ main {
   padding: 1rem;
 }
 
-.app-box.app-box2 {
+.app-box,
+.app-box2 {
   flex: 1 1 300px; 
   max-width: 450px;
   min-width: 250px;
