@@ -7,7 +7,7 @@ fetch('json/repo.json')
       card.className = 'app-card';
       card.innerHTML = `
         <img src="${app.icon}" alt="${app.name}">
-        <div class="app-info">
+        <div class="glass-box">
           <h2>${app.name}</h2>
           <p><strong>Bundle ID:</strong> ${app.bundle_id}</p>
           <p><strong>Version:</strong> ${app.version}</p>
