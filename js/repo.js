@@ -6,7 +6,7 @@ fetch('json/repo.json')
       const card = document.createElement('div');
       card.className = 'glass-box';
       card.innerHTML = `
-        <img src="${app.icon}" alt="${app.name}">
+        <img class="app-logo" src="${app.icon}" alt="${app.name}">
         <div class="glass-box">
           <h2>${app.name}</h2>
           <p><strong>Bundle ID:</strong> ${app.bundle_id}</p>
