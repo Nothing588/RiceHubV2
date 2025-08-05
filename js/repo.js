@@ -1,3 +1,5 @@
+let allApps = [];
+
 fetch('json/repo.json')
   .then(res => res.json())
   .then(apps => {
@@ -21,3 +23,9 @@ fetch('json/repo.json')
     console.error("Failed to load apps.json:", err);
     document.getElementById("app-list").innerHTML = "<p>Failed to load app list.</p>";
   });
+
+document.getElementById('search-input').addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+  const filtered = allApps.filter(app => app.name.toLowerCase().includes(query));
+  displayApps(filtered);
+});
