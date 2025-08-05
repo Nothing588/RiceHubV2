@@ -17,7 +17,7 @@ function displayApps(apps) {
 
   apps.forEach(app => {
     const card = document.createElement('div');
-    card.className = 'glass-box people-box';
+    card.className = '.app-box app-box2';
     card.innerHTML = `
       <img class="people-pic" src="${app.icon}" alt="${app.name}">
       <div class="people-info">
