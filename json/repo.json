@@ -69,11 +69,39 @@
     "download": "https://file.ipaomtk.com/ipa/Nulls-Brawl-1.ipa"
   },
   {
-    "name": "Arcane Defense",
+    "name": "Arcane Defense Modded",
     "bundle_id": "com.arcane.defense",
     "version": "0.13.1",
     "icon" : "https://tutuipa.com/wp-content/uploads/2025/05/Arcane-Defense.jpg",
     "download": "https://file.ipaomtk.com/ipa/Arcane_Defense_ipaomtk.com.ipa"
+  },
+  {
+    "name": "League Of Dreamers My Story Modded",
+    "bundle_id": "com.league.dream",
+    "version": "2.1.5",
+    "icon" : "https://tutuipa.com/wp-content/uploads/2025/05/League-of-Dreamers-8211-My-Story.jpg",
+    "download": "https://file.ipaomtk.com/ipa/League-of-Dreamers-IPAOMTK.COM.ipa"
+  },
+  {
+    "name": "Idle Planet Miner Modded",
+    "bundle_id": "com.idlepla.miner",
+    "version": "2.41",
+    "icon" : "https://tutuipa.com/wp-content/uploads/2025/05/Idle-Planet-Miner.jpg",
+    "download": "https://file.ipaomtk.com/ipa/Idle-Planet-Miner-IPAOMTK.COM.ipa"
+  },
+  {
+    "name": "",
+    "bundle_id": "",
+    "version": "",
+    "icon" : "",
+    "download": ""
+  },
+  {
+    "name": "",
+    "bundle_id": "",
+    "version": "",
+    "icon" : "",
+    "download": ""
   },
   {
     "name": "",
