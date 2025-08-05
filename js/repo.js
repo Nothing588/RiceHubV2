@@ -1,4 +1,4 @@
-fetch('apps.json')
+fetch('json/repo.json')
   .then(res => res.json())
   .then(apps => {
     const container = document.getElementById('app-list');
