@@ -4,7 +4,7 @@ fetch('json/repo.json')
     const container = document.getElementById('app-list');
     apps.forEach(app => {
       const card = document.createElement('div');
-      card.className = 'app-card';
+      card.className = 'glass-box';
       card.innerHTML = `
         <img src="${app.icon}" alt="${app.name}">
         <div class="glass-box">
