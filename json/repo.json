@@ -3,7 +3,7 @@
     "name": "RiceMusic",
     "bundle_id": "com.ricemusic.app",
     "version": "1.0.2",
-    "icon": "Other/Logo.jpeg",
+    "icon": "https://ricehubv2.netlify.app/Other/Logo.jpeg",
     "download": "https://yourserver.com/ipas/ricemusic.ipa"
   },
   {
