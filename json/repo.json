@@ -46,6 +46,13 @@
     "version": "6.9.0",
     "icon": "https://ricehubv2.vercel.app/Other/Logo.jpeg",
     "download": "https://www.mediafire.com/file/nzh9nokseztizmx/iCreatePro_6.9.0.ipa/file"
+  },
+  {
+    "name": "Youtube Music+",
+    "bundle_id": "com.ricehub+.app",
+    "version": "2.31",
+    "icon": "https://onejailbreak.com/site/assets/files/1275/logo_youtube_music_2024_q4_color76x76_2x_ipad.64x0.webp",
+    "download": "https://www.mediafire.com/file/oiksy99zcslfdh3/YouTubeMusic_8.24.2_Ultimate.ipa/file"
   }
 
 ]
