@@ -12,5 +12,19 @@
     "version": "2.863",
     "icon": "https://www.f6s.com/content-resource/profiles/5769070_92ce91f9b533a5ff3b8f92135b50f4e790109d82_th1.jpg",
     "download": "https://delta.webfiles.pro/file/Delta-2.683.774.ipa"
-  }
+  },
+  {
+    "name": "KRNL iOS",
+    "bundle_id": "com.krnl.app",
+    "version": "2.863",
+    "icon": "https://play-lh.googleusercontent.com/6r1-cMLJ_Oao25M1NjstmGXob3gCNWjulRgRfafumFZSmSyiv9hvx-gCNX5NVZLMsQ=w200-rw",
+    "download": "https://krnl.webfiles.pro/file/Krnl_release_683.ipa"
+  }, 
+  {
+    "name": "Delta iOS",
+    "bundle_id": "com.gloop.app",
+    "version": "2.863",
+    "icon": "https://www.f6s.com/content-resource/profiles/5769070_92ce91f9b533a5ff3b8f92135b50f4e790109d82_th1.jpg",
+    "download": "https://delta.webfiles.pro/file/Delta-2.683.774.ipa"
+  },
 ]
