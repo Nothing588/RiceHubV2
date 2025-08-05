@@ -7,10 +7,10 @@
     "download": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift6.0.2/EeveeSpotify-6.0.2-9.0.58.ipa"
   },
   {
-    "name": "",
-    "bundle_id": "",
-    "version": "",
-    "icon": "",
-    "download": ""
+    "name": "Delta iOS",
+    "bundle_id": "com.gloop.app",
+    "version": "2.863",
+    "icon": "https://www.f6s.com/content-resource/profiles/5769070_92ce91f9b533a5ff3b8f92135b50f4e790109d82_th1.jpg",
+    "download": "https://delta.webfiles.pro/file/Delta-2.683.774.ipa"
   }
 ]
