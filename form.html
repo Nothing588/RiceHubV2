@@ -2,93 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Test Submit to Google Apps Script</title>
+  <title>Load Community Apps</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 500px;
-      margin: 2rem auto;
-      padding: 1rem;
+    .app-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      max-width: 400px;
     }
-    label {
-      display: block;
-      margin-top: 1rem;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 0.3rem;
-      box-sizing: border-box;
-    }
-    button {
-      margin-top: 1.5rem;
-      padding: 10px 20px;
-      font-size: 1rem;
-    }
-    #response {
-      margin-top: 1rem;
-      white-space: pre-wrap;
-      background: #f0f0f0;
-      padding: 10px;
-      border-radius: 6px;
-      min-height: 50px;
+    .app-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 12px;
+      float: left;
+      margin-right: 15px;
     }
   </style>
 </head>
 <body>
-
-  <h2>Submit App Info</h2>
-
-  <form id="appForm">
-    <label for="name">App Name:</label>
-    <input type="text" id="name" name="name" required />
-
-    <label for="bundle_id">Bundle ID:</label>
-    <input type="text" id="bundle_id" name="bundle_id" required />
-
-    <label for="version">Version:</label>
-    <input type="text" id="version" name="version" required />
-
-    <label for="icon">Icon URL:</label>
-    <input type="url" id="icon" name="icon" />
-
-    <label for="download">Download URL:</label>
-    <input type="url" id="download" name="download" required />
-
-    <button type="submit">Submit</button>
-  </form>
-
-  <pre id="response"></pre>
+  <h1>Community IPA Apps</h1>
+  <div id="app-list"></div>
 
   <script>
-    const form = document.getElementById('appForm');
-    const responseEl = document.getElementById('response');
+    const url = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhj04iZdumx-LnXakKIfdq24GWTk0V81KmF705bfXkIY81WwxaXO2_gIjmFZGd17gqbcVQVOvISj1hS1EjO7MRzL6OU9-7ixQq7jVU5V1tnMZY-ec5FwpQMekVfuCaubP95ZWlIgkJSr1234skYMhgLn9Kbiruw_62fLCeXSuPlTqIlmCMtfRcU4Mxks7LdM2EXBQJoRqvFJsUlQSRFk10UtccRLVV-m_3gjqwluBbA2Gx4dbmqCXuDlkG6vyavlLyTGsm_6mp991ZAiv1j7Vd7LinsHg&lib=M-6L6s3vj7kNcfkGIWeID7ErknCf72OHO";
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('app-list');
+        container.innerHTML = ''; // clear
 
-      const formData = {
-        name: form.name.value.trim(),
-        bundle_id: form.bundle_id.value.trim(),
-        version: form.version.value.trim(),
-        icon: form.icon.value.trim(),
-        download: form.download.value.trim()
-      };
+        data.forEach(app => {
+          const card = document.createElement('div');
+          card.className = 'app-card';
 
-      try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbzixseVn3ntqm_rtXliNvhOfV_Woa_ErEK7SXEn7Zq_yWx7_zz8RIeyOEkWa-NOuQzI/exec', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
+          card.innerHTML = `
+            <img src="${app.icon || 'https://via.placeholder.com/60'}" alt="${app.name}" />
+            <h3>${app.name}</h3>
+            <p><strong>Bundle ID:</strong> ${app.bundle_id || app.bundleIdentifier || 'N/A'}</p>
+            <p><strong>Version:</strong> ${app.version || 'N/A'}</p>
+            <a href="${app.download || app.downloadURL}" target="_blank" rel="noopener noreferrer">Download IPA</a>
+            <div style="clear:both;"></div>
+          `;
+          container.appendChild(card);
         });
-
-        const data = await res.json();
-        responseEl.textContent = JSON.stringify(data, null, 2);
-      } catch (err) {
-        responseEl.textContent = 'Error: ' + err.message;
-      }
-    });
+      })
+      .catch(err => {
+        document.getElementById('app-list').innerText = 'Failed to load app list.';
+        console.error(err);
+      });
   </script>
-
 </body>
 </html>
