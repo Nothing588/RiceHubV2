@@ -112,8 +112,14 @@
   },
   { "name": "Youtube Lite+ IPA",
     "bundle_id": "com.lite.youtube",
-    "verison": "Gng idk",
+    "version": "Gng idk",
     "icon": "https://ytliteplus.github.io/Logo.png",
     "download": "https://files.catbox.moe/z8jg5n.ipa"
+  },
+  { "name": "Null Clash",
+    "bundle_id": "com.clash.clans",
+    "version": "17.360",
+    "icon": "https://nullclash.org/wp-content/uploads/2025/03/Nulls-Clash-1.webp",
+    "download": "https://www.dropbox.com/scl/fi/43pacqa1vdsx16doo24yo/Nulls-Clash-17.126.6.nullclash.org.ipa?rlkey=mvt7nkeme0dcx5bistudt3kjw&st=a7bl22q8&dl=1"
   }
 ]
