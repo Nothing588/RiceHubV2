@@ -109,5 +109,11 @@
     "version": "v1.21.94",
     "icon" : "https://tutuipa.com/wp-content/uploads/2023/06/photo_2025-05-17-03.04.29.jpeg",
     "download": "https://file.ipaomtk.com/ipa/Minecraft-ipaomtk.com_1.21.94.ipa"
+  },
+  { "name": "Youtube Lite+ IPA",
+    "bundle_id": "com.lite.youtube"
+    "verison": "Gng idk",
+    "icon": "https://ytliteplus.github.io/Logo.png",
+    "download": "https://files.catbox.moe/z8jg5n.ipa"
   }
 ]
