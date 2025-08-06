@@ -56,30 +56,34 @@
   </style>
 </head>
 <body>
+<form id="appForm">
+  <input name="name" placeholder="App Name" required><br>
+  <input name="bundle_id" placeholder="Bundle ID" required><br>
+  <input name="version" placeholder="Version" required><br>
+  <input name="icon" placeholder="Icon URL"><br>
+  <input name="download" placeholder="IPA Download URL" required><br>
+  <button type="submit">Submit</button>
+</form>
 
-  <form action="submit_app.php" method="POST">
-    <h2>Submit an App to the Community Library</h2>
+<script>
+document.getElementById('appForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    <label for="name">App Name</label>
-    <input type="text" name="name" id="name" required>
+  const formData = new FormData(e.target);
+  const obj = Object.fromEntries(formData.entries());
 
-    <label for="bundleIdentifier">Bundle Identifier</label>
-    <input type="text" name="bundleIdentifier" id="bundleIdentifier" required>
+  fetch('https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgl7iCntoj0KABh65BSCYxId_a3LnmnWLPaqZci6YHb_1qzUL42NIvBdLjsZ4dB9D_90k3hIcvFMRlAlXNoyPtq_gx2YHFzxi_J8VBIRTJ42iWNxnKH8aNf3NzokEhXr0pjmeFmIKAGRcrWvEcsZdNqKMRnDaEu5mk8Tzt3HH9uL1ylOsQVSr5zlATK55NE93yZcQV4sRSCeL2ltaT-cGa071sB7eQmWvgyIsHFf9VJACHOeURGh_UC6ko8ndGKJf3nI7d3A4gF5ng6etAkgeT1qZGlTQ&lib=MglaWoLP1b22UFIebhS3PtUrknCf72OHO', {
+    method: 'POST',
+    body: JSON.stringify(obj),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+    .then(data => alert('App submitted!'))
+    .catch(err => alert('Failed to submit app.'));
+});
+</script>
 
-    <label for="version">Version</label>
-    <input type="text" name="version" id="version" required>
-
-    <label for="downloadURL">Download URL (.ipa)</label>
-    <input type="url" name="downloadURL" id="downloadURL" required>
-
-    <label for="iconURL">Icon URL (optional)</label>
-    <input type="url" name="iconURL" id="iconURL">
-
-    <label for="description">App Description (optional)</label>
-    <textarea name="description" id="description" rows="3"></textarea>
-
-    <button type="submit">Submit App</button>
-  </form>
 
 </body>
 </html>
