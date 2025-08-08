@@ -232,48 +232,67 @@ main {
   margin-bottom: 6px;
   color: #fff;
 }
+
 .navbar {
-    postion: reletive;
-    background: rgb(34,2,0);
-    backdrop-filter: blur(14px);
-    padding: 1rem;
+    position: relative;
+    background: rgba(10, 10, 30, 0.85);
+    backdrop-filter: blur(16px);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    border-bottom: 1px solid #0ff;
+    box-shadow: 0 0 15px #0ff88a inset;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .desktop-logo {
-    display: none; 
+    display: none;
     height: 50px;
     width: 50px;
-    margin-right: 15px; 
-    object-fit: cover; 
-    order: -1; 
-    border-radius: 50%; 
-    border: 1px solid 797979; 
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-right: 15px;
+    object-fit: cover;
+    order: -1;
+    border-radius: 50%;
+    border: 1.5px solid #0ff;
+    box-shadow: 0 0 12px #0ff, 0 0 25px #0ff88a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .desktop-logo:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0ff, 0 0 35px #0ff88a;
 }
 
 .navbar-toggler {
     border: none;
+    background: transparent;
 }
 
 .navbar-toggler-icon {
-    background-color: white;
+    background-color: #0ff;
+    box-shadow: 0 0 8px #0ff;
+    width: 30px;
+    height: 3px;
+    display: block;
+    border-radius: 3px;
 }
 
 .nav-title {
-    font-weight: bold;
+    font-weight: 700;
     margin-right: 3rem;
     flex-shrink: 0;
     z-index: 100;
+    color: #0ff;
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff88a;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    user-select: none;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .nav-title .title-full {
@@ -286,12 +305,23 @@ main {
 
 .navbar-nav {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: white;
+    color: #0ff;
     text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #00fff7;
+    text-shadow:
+      0 0 8px #00fff7,
+      0 0 16px #00fff7,
+      0 0 24px #00fff7;
 }
 
 .navbar .navbar-collapse {
@@ -301,6 +331,7 @@ main {
 .navbar a i {
     display: none;
     transition: opacity 0.3s ease;
+    color: #0ff;
 }
 
 @media screen and (min-width: 768px) {
@@ -325,12 +356,16 @@ main {
         display: none;
     }
 }
+
 .container h1 {
     font-size: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff88a;
 }
 
 .container p {
     font-size: 1rem;
+    color: #a0eaff;
 }
 
 .hamburger {
@@ -345,8 +380,10 @@ main {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #0ff;
     margin: 5px 0;
+    border-radius: 2px;
+    box-shadow: 0 0 8px #0ff;
     transition: all 0.3s ease;
 }
 
@@ -368,9 +405,10 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(5, 10, 30, 0.95);
     padding: 1rem;
     border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 20px #0ff88a;
     z-index: 999;
 }
 
@@ -384,22 +422,24 @@ main {
 }
 
 .mobile-logo {
-    display: none; 
-    height: 50px; 
-    width: 50px; 
-    position: absolute; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 99; 
-    border-radius: 50%; 
+    display: none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    border-radius: 50%;
+    border: 1.5px solid #0ff;
+    box-shadow: 0 0 15px #0ff, 0 0 30px #0ff88a;
 }
 
 @media screen and (max-width: 767px) {
     .desktop-logo {
-        display: none; 
+        display: none;
     }
     .mobile-logo {
-        display: block; 
+        display: block;
     }
 }
 
@@ -420,6 +460,7 @@ main {
         padding: 0;
         flex-direction: row;
         gap: 1rem;
+        box-shadow: none;
     }
 
     .desktop-logo {
@@ -427,22 +468,19 @@ main {
     }
 }
 
-.navbar a i {
-    display: none;
-    transition: opacity 0.3s ease;
-}
-
-@media screen and (min-width: 768px) {
-    .navbar a i {
-        display: inline-block;
-        opacity: 1;
-    }
-}
-
 .navbar a {
-    color: white;
+    color: #0ff;
     text-decoration: none;
     margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00fff7;
+    text-shadow:
+      0 0 8px #00fff7,
+      0 0 16px #00fff7,
+      0 0 24px #00fff7;
 }
 
 .navbar::after {
@@ -452,7 +490,9 @@ main {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: white;
+    background: linear-gradient(90deg, #0ff, #00fff7);
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px #0ff);
 }
 
 .footer {
