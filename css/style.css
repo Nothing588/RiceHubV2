@@ -1,22 +1,33 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(79, 214, 135, 1) 39%, rgba(98, 204, 181, 1) 100%);
+  font-family: 'Roboto Mono', monospace;
+  background: linear-gradient(120deg, #050013, #0a0021, #120033, #050013);
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
-  color: white;
+  color: #e0e0ff;
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 9999;
 }
 
 @keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% }
 }
 
 main {
